@@ -1,0 +1,140 @@
+
+Lmod is automatically replacing "nvhpc/23.9" with "gcc-native/12.3".
+
+
+Lmod is automatically replacing "PrgEnv-nvhpc/8.5.0" with "PrgEnv-gnu/8.5.0".
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) cray-mpich/8.1.28
+
+libfabric:1605776:1738921326::core:core:ze_hmem_dl_init():474<warn> Failed to dlopen libze_loader.so
+libfabric:1605776:1738921326::core:core:ofi_hmem_init():339<warn> Failed to initialize hmem iface FI_HMEM_ZE: No data available
+libfabric:1605776:1738921326::core:core:ze_hmem_dl_init():474<warn> Failed to dlopen libze_loader.so
+libfabric:1605776:1738921326::core:core:ofi_hmem_init():339<warn> Failed to initialize hmem iface FI_HMEM_ZE: No data available
+libfabric:1605776:1738921326::core:core:ze_hmem_dl_init():474<warn> Failed to dlopen libze_loader.so
+libfabric:1605776:1738921326::core:core:fi_getinfo_():1185<warn> fi_getinfo: provider ofi_rxm returned -61 (No data available)
+libfabric:1605776:1738921326::core:core:fi_getinfo_():1185<warn> fi_getinfo: provider ofi_rxd returned -61 (No data available)
+libfabric:1605776:1738921326::core:core:fi_getinfo_():1185<warn> fi_getinfo: provider ofi_rxm returned -61 (No data available)
+libfabric:1605776:1738921326::core:core:fi_getinfo_():1185<warn> fi_getinfo: provider ofi_rxd returned -61 (No data available)
+libfabric:1605776:1738921326::cxi:domain:cxip_domain_enable():142<warn> x3203c0s13b0n0: Security Issue: Using unrestricted service ID 1 for cxi0. Please provide a service ID via auth_key fields.
+# [2553540.009031] mercury->addr [error] /var/tmp/pbs.3097831.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/agueroudji/spack-stage/spack-stage-mercury-2.4.0rc5-f2ewbzqypqzpcqswav4qzh3irbomhlno/spack-src/src/mercury.c:1703 HG_Addr_self() NULL HG class
+# [2553540.009074] mercury->addr [error] /var/tmp/pbs.3097831.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/agueroudji/spack-stage/spack-stage-mercury-2.4.0rc5-f2ewbzqypqzpcqswav4qzh3irbomhlno/spack-src/src/mercury.c:1755 HG_Addr_to_string() NULL HG class
+# [2553540.009092] mercury->addr [error] /var/tmp/pbs.3097831.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/agueroudji/spack-stage/spack-stage-mercury-2.4.0rc5-f2ewbzqypqzpcqswav4qzh3irbomhlno/spack-src/src/mercury.c:1665 HG_Addr_free() NULL HG class
+libfabric:1605778:1738921328::core:core:ze_hmem_dl_init():474<warn> Failed to dlopen libze_loader.so
+libfabric:1605778:1738921328::core:core:ofi_hmem_init():339<warn> Failed to initialize hmem iface FI_HMEM_ZE: No data available
+libfabric:1605778:1738921328::core:core:ze_hmem_dl_init():474<warn> Failed to dlopen libze_loader.so
+libfabric:1605778:1738921328::core:core:ofi_hmem_init():339<warn> Failed to initialize hmem iface FI_HMEM_ZE: No data available
+libfabric:1605778:1738921328::core:core:ze_hmem_dl_init():474<warn> Failed to dlopen libze_loader.so
+libfabric:1605778:1738921328::core:core:fi_getinfo_():1185<warn> fi_getinfo: provider ofi_rxm returned -61 (No data available)
+libfabric:1605778:1738921328::core:core:fi_getinfo_():1185<warn> fi_getinfo: provider ofi_rxd returned -61 (No data available)
+libfabric:1605778:1738921328::core:core:fi_getinfo_():1185<warn> fi_getinfo: provider ofi_rxm returned -61 (No data available)
+libfabric:1605778:1738921328::core:core:fi_getinfo_():1185<warn> fi_getinfo: provider ofi_rxd returned -61 (No data available)
+libfabric:1605778:1738921328::cxi:domain:cxip_domain_enable():142<warn> x3203c0s13b0n0: Security Issue: Using unrestricted service ID 1 for cxi0. Please provide a service ID via auth_key fields.
+# [2553542.336973] mercury->addr [error] /var/tmp/pbs.3097831.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/agueroudji/spack-stage/spack-stage-mercury-2.4.0rc5-f2ewbzqypqzpcqswav4qzh3irbomhlno/spack-src/src/mercury.c:1703 HG_Addr_self() NULL HG class
+# [2553542.337013] mercury->addr [error] /var/tmp/pbs.3097831.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/agueroudji/spack-stage/spack-stage-mercury-2.4.0rc5-f2ewbzqypqzpcqswav4qzh3irbomhlno/spack-src/src/mercury.c:1755 HG_Addr_to_string() NULL HG class
+# [2553542.337030] mercury->addr [error] /var/tmp/pbs.3097831.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/agueroudji/spack-stage/spack-stage-mercury-2.4.0rc5-f2ewbzqypqzpcqswav4qzh3irbomhlno/spack-src/src/mercury.c:1665 HG_Addr_free() NULL HG class
+libfabric:1605780:1738921330::core:core:ze_hmem_dl_init():474<warn> Failed to dlopen libze_loader.so
+libfabric:1605780:1738921330::core:core:ofi_hmem_init():339<warn> Failed to initialize hmem iface FI_HMEM_ZE: No data available
+libfabric:1605780:1738921330::core:core:ze_hmem_dl_init():474<warn> Failed to dlopen libze_loader.so
+libfabric:1605780:1738921330::core:core:ofi_hmem_init():339<warn> Failed to initialize hmem iface FI_HMEM_ZE: No data available
+libfabric:1605780:1738921330::core:core:ze_hmem_dl_init():474<warn> Failed to dlopen libze_loader.so
+libfabric:1605780:1738921330::core:core:fi_getinfo_():1185<warn> fi_getinfo: provider ofi_rxm returned -61 (No data available)
+libfabric:1605780:1738921330::core:core:fi_getinfo_():1185<warn> fi_getinfo: provider ofi_rxd returned -61 (No data available)
+libfabric:1605780:1738921330::core:core:fi_getinfo_():1185<warn> fi_getinfo: provider ofi_rxm returned -61 (No data available)
+libfabric:1605780:1738921330::core:core:fi_getinfo_():1185<warn> fi_getinfo: provider ofi_rxd returned -61 (No data available)
+libfabric:1605780:1738921330::cxi:domain:cxip_domain_enable():142<warn> x3203c0s13b0n0: Security Issue: Using unrestricted service ID 1 for cxi0. Please provide a service ID via auth_key fields.
+# [2553544.632810] mercury->addr [error] /var/tmp/pbs.3097831.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/agueroudji/spack-stage/spack-stage-mercury-2.4.0rc5-f2ewbzqypqzpcqswav4qzh3irbomhlno/spack-src/src/mercury.c:1703 HG_Addr_self() NULL HG class
+# [2553544.632858] mercury->addr [error] /var/tmp/pbs.3097831.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/agueroudji/spack-stage/spack-stage-mercury-2.4.0rc5-f2ewbzqypqzpcqswav4qzh3irbomhlno/spack-src/src/mercury.c:1755 HG_Addr_to_string() NULL HG class
+# [2553544.632876] mercury->addr [error] /var/tmp/pbs.3097831.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/agueroudji/spack-stage/spack-stage-mercury-2.4.0rc5-f2ewbzqypqzpcqswav4qzh3irbomhlno/spack-src/src/mercury.c:1665 HG_Addr_free() NULL HG class
+libfabric:1605782:1738921333::core:core:ze_hmem_dl_init():474<warn> Failed to dlopen libze_loader.so
+libfabric:1605782:1738921333::core:core:ofi_hmem_init():339<warn> Failed to initialize hmem iface FI_HMEM_ZE: No data available
+libfabric:1605782:1738921333::core:core:ze_hmem_dl_init():474<warn> Failed to dlopen libze_loader.so
+libfabric:1605782:1738921333::core:core:ofi_hmem_init():339<warn> Failed to initialize hmem iface FI_HMEM_ZE: No data available
+libfabric:1605782:1738921333::core:core:ze_hmem_dl_init():474<warn> Failed to dlopen libze_loader.so
+libfabric:1605782:1738921333::core:core:fi_getinfo_():1185<warn> fi_getinfo: provider ofi_rxm returned -61 (No data available)
+libfabric:1605782:1738921333::core:core:fi_getinfo_():1185<warn> fi_getinfo: provider ofi_rxd returned -61 (No data available)
+libfabric:1605782:1738921333::core:core:fi_getinfo_():1185<warn> fi_getinfo: provider ofi_rxm returned -61 (No data available)
+libfabric:1605782:1738921333::core:core:fi_getinfo_():1185<warn> fi_getinfo: provider ofi_rxd returned -61 (No data available)
+libfabric:1605782:1738921333::cxi:domain:cxip_domain_enable():142<warn> x3203c0s13b0n0: Security Issue: Using unrestricted service ID 1 for cxi0. Please provide a service ID via auth_key fields.
+# [2553546.944994] mercury->addr [error] /var/tmp/pbs.3097831.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/agueroudji/spack-stage/spack-stage-mercury-2.4.0rc5-f2ewbzqypqzpcqswav4qzh3irbomhlno/spack-src/src/mercury.c:1703 HG_Addr_self() NULL HG class
+# [2553546.945041] mercury->addr [error] /var/tmp/pbs.3097831.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/agueroudji/spack-stage/spack-stage-mercury-2.4.0rc5-f2ewbzqypqzpcqswav4qzh3irbomhlno/spack-src/src/mercury.c:1755 HG_Addr_to_string() NULL HG class
+# [2553546.945059] mercury->addr [error] /var/tmp/pbs.3097831.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/agueroudji/spack-stage/spack-stage-mercury-2.4.0rc5-f2ewbzqypqzpcqswav4qzh3irbomhlno/spack-src/src/mercury.c:1665 HG_Addr_free() NULL HG class
+libfabric:1605784:1738921335::core:core:ze_hmem_dl_init():474<warn> Failed to dlopen libze_loader.so
+libfabric:1605784:1738921335::core:core:ofi_hmem_init():339<warn> Failed to initialize hmem iface FI_HMEM_ZE: No data available
+libfabric:1605784:1738921335::core:core:ze_hmem_dl_init():474<warn> Failed to dlopen libze_loader.so
+libfabric:1605784:1738921335::core:core:ofi_hmem_init():339<warn> Failed to initialize hmem iface FI_HMEM_ZE: No data available
+libfabric:1605784:1738921335::core:core:ze_hmem_dl_init():474<warn> Failed to dlopen libze_loader.so
+libfabric:1605784:1738921335::core:core:fi_getinfo_():1185<warn> fi_getinfo: provider ofi_rxm returned -61 (No data available)
+libfabric:1605784:1738921335::core:core:fi_getinfo_():1185<warn> fi_getinfo: provider ofi_rxd returned -61 (No data available)
+libfabric:1605784:1738921335::core:core:fi_getinfo_():1185<warn> fi_getinfo: provider ofi_rxm returned -61 (No data available)
+libfabric:1605784:1738921335::core:core:fi_getinfo_():1185<warn> fi_getinfo: provider ofi_rxd returned -61 (No data available)
+libfabric:1605784:1738921335::cxi:domain:cxip_domain_enable():142<warn> x3203c0s13b0n0: Security Issue: Using unrestricted service ID 1 for cxi0. Please provide a service ID via auth_key fields.
+# [2553549.164790] mercury->addr [error] /var/tmp/pbs.3097831.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/agueroudji/spack-stage/spack-stage-mercury-2.4.0rc5-f2ewbzqypqzpcqswav4qzh3irbomhlno/spack-src/src/mercury.c:1703 HG_Addr_self() NULL HG class
+# [2553549.164829] mercury->addr [error] /var/tmp/pbs.3097831.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/agueroudji/spack-stage/spack-stage-mercury-2.4.0rc5-f2ewbzqypqzpcqswav4qzh3irbomhlno/spack-src/src/mercury.c:1755 HG_Addr_to_string() NULL HG class
+# [2553549.164848] mercury->addr [error] /var/tmp/pbs.3097831.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/agueroudji/spack-stage/spack-stage-mercury-2.4.0rc5-f2ewbzqypqzpcqswav4qzh3irbomhlno/spack-src/src/mercury.c:1665 HG_Addr_free() NULL HG class
+libfabric:1605786:1738921337::core:core:ze_hmem_dl_init():474<warn> Failed to dlopen libze_loader.so
+libfabric:1605786:1738921337::core:core:ofi_hmem_init():339<warn> Failed to initialize hmem iface FI_HMEM_ZE: No data available
+libfabric:1605786:1738921337::core:core:ze_hmem_dl_init():474<warn> Failed to dlopen libze_loader.so
+libfabric:1605786:1738921337::core:core:ofi_hmem_init():339<warn> Failed to initialize hmem iface FI_HMEM_ZE: No data available
+libfabric:1605786:1738921337::core:core:ze_hmem_dl_init():474<warn> Failed to dlopen libze_loader.so
+libfabric:1605786:1738921337::core:core:fi_getinfo_():1185<warn> fi_getinfo: provider ofi_rxm returned -61 (No data available)
+libfabric:1605786:1738921337::core:core:fi_getinfo_():1185<warn> fi_getinfo: provider ofi_rxd returned -61 (No data available)
+libfabric:1605786:1738921337::core:core:fi_getinfo_():1185<warn> fi_getinfo: provider ofi_rxm returned -61 (No data available)
+libfabric:1605786:1738921337::core:core:fi_getinfo_():1185<warn> fi_getinfo: provider ofi_rxd returned -61 (No data available)
+libfabric:1605786:1738921337::cxi:domain:cxip_domain_enable():142<warn> x3203c0s13b0n0: Security Issue: Using unrestricted service ID 1 for cxi0. Please provide a service ID via auth_key fields.
+# [2553551.320853] mercury->addr [error] /var/tmp/pbs.3097831.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/agueroudji/spack-stage/spack-stage-mercury-2.4.0rc5-f2ewbzqypqzpcqswav4qzh3irbomhlno/spack-src/src/mercury.c:1703 HG_Addr_self() NULL HG class
+# [2553551.320894] mercury->addr [error] /var/tmp/pbs.3097831.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/agueroudji/spack-stage/spack-stage-mercury-2.4.0rc5-f2ewbzqypqzpcqswav4qzh3irbomhlno/spack-src/src/mercury.c:1755 HG_Addr_to_string() NULL HG class
+# [2553551.320912] mercury->addr [error] /var/tmp/pbs.3097831.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/agueroudji/spack-stage/spack-stage-mercury-2.4.0rc5-f2ewbzqypqzpcqswav4qzh3irbomhlno/spack-src/src/mercury.c:1665 HG_Addr_free() NULL HG class
+libfabric:1605789:1738921339::core:core:ze_hmem_dl_init():474<warn> Failed to dlopen libze_loader.so
+libfabric:1605789:1738921339::core:core:ofi_hmem_init():339<warn> Failed to initialize hmem iface FI_HMEM_ZE: No data available
+libfabric:1605789:1738921339::core:core:ze_hmem_dl_init():474<warn> Failed to dlopen libze_loader.so
+libfabric:1605789:1738921339::core:core:ofi_hmem_init():339<warn> Failed to initialize hmem iface FI_HMEM_ZE: No data available
+libfabric:1605789:1738921339::core:core:ze_hmem_dl_init():474<warn> Failed to dlopen libze_loader.so
+libfabric:1605789:1738921339::core:core:fi_getinfo_():1185<warn> fi_getinfo: provider ofi_rxm returned -61 (No data available)
+libfabric:1605789:1738921339::core:core:fi_getinfo_():1185<warn> fi_getinfo: provider ofi_rxd returned -61 (No data available)
+libfabric:1605789:1738921339::core:core:fi_getinfo_():1185<warn> fi_getinfo: provider ofi_rxm returned -61 (No data available)
+libfabric:1605789:1738921339::core:core:fi_getinfo_():1185<warn> fi_getinfo: provider ofi_rxd returned -61 (No data available)
+libfabric:1605789:1738921339::cxi:domain:cxip_domain_enable():142<warn> x3203c0s13b0n0: Security Issue: Using unrestricted service ID 1 for cxi0. Please provide a service ID via auth_key fields.
+# [2553553.488950] mercury->addr [error] /var/tmp/pbs.3097831.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/agueroudji/spack-stage/spack-stage-mercury-2.4.0rc5-f2ewbzqypqzpcqswav4qzh3irbomhlno/spack-src/src/mercury.c:1703 HG_Addr_self() NULL HG class
+# [2553553.489000] mercury->addr [error] /var/tmp/pbs.3097831.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/agueroudji/spack-stage/spack-stage-mercury-2.4.0rc5-f2ewbzqypqzpcqswav4qzh3irbomhlno/spack-src/src/mercury.c:1755 HG_Addr_to_string() NULL HG class
+# [2553553.489019] mercury->addr [error] /var/tmp/pbs.3097831.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/agueroudji/spack-stage/spack-stage-mercury-2.4.0rc5-f2ewbzqypqzpcqswav4qzh3irbomhlno/spack-src/src/mercury.c:1665 HG_Addr_free() NULL HG class
+libfabric:1605791:1738921341::core:core:ze_hmem_dl_init():474<warn> Failed to dlopen libze_loader.so
+libfabric:1605791:1738921341::core:core:ofi_hmem_init():339<warn> Failed to initialize hmem iface FI_HMEM_ZE: No data available
+libfabric:1605791:1738921341::core:core:ze_hmem_dl_init():474<warn> Failed to dlopen libze_loader.so
+libfabric:1605791:1738921341::core:core:ofi_hmem_init():339<warn> Failed to initialize hmem iface FI_HMEM_ZE: No data available
+libfabric:1605791:1738921341::core:core:ze_hmem_dl_init():474<warn> Failed to dlopen libze_loader.so
+libfabric:1605791:1738921341::core:core:fi_getinfo_():1185<warn> fi_getinfo: provider ofi_rxm returned -61 (No data available)
+libfabric:1605791:1738921341::core:core:fi_getinfo_():1185<warn> fi_getinfo: provider ofi_rxd returned -61 (No data available)
+libfabric:1605791:1738921341::core:core:fi_getinfo_():1185<warn> fi_getinfo: provider ofi_rxm returned -61 (No data available)
+libfabric:1605791:1738921341::core:core:fi_getinfo_():1185<warn> fi_getinfo: provider ofi_rxd returned -61 (No data available)
+libfabric:1605791:1738921341::cxi:domain:cxip_domain_enable():142<warn> x3203c0s13b0n0: Security Issue: Using unrestricted service ID 1 for cxi0. Please provide a service ID via auth_key fields.
+# [2553555.601000] mercury->addr [error] /var/tmp/pbs.3097831.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/agueroudji/spack-stage/spack-stage-mercury-2.4.0rc5-f2ewbzqypqzpcqswav4qzh3irbomhlno/spack-src/src/mercury.c:1703 HG_Addr_self() NULL HG class
+# [2553555.601050] mercury->addr [error] /var/tmp/pbs.3097831.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/agueroudji/spack-stage/spack-stage-mercury-2.4.0rc5-f2ewbzqypqzpcqswav4qzh3irbomhlno/spack-src/src/mercury.c:1755 HG_Addr_to_string() NULL HG class
+# [2553555.601068] mercury->addr [error] /var/tmp/pbs.3097831.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/agueroudji/spack-stage/spack-stage-mercury-2.4.0rc5-f2ewbzqypqzpcqswav4qzh3irbomhlno/spack-src/src/mercury.c:1665 HG_Addr_free() NULL HG class
+libfabric:1605793:1738921344::core:core:ze_hmem_dl_init():474<warn> Failed to dlopen libze_loader.so
+libfabric:1605793:1738921344::core:core:ofi_hmem_init():339<warn> Failed to initialize hmem iface FI_HMEM_ZE: No data available
+libfabric:1605793:1738921344::core:core:ze_hmem_dl_init():474<warn> Failed to dlopen libze_loader.so
+libfabric:1605793:1738921344::core:core:ofi_hmem_init():339<warn> Failed to initialize hmem iface FI_HMEM_ZE: No data available
+libfabric:1605793:1738921344::core:core:ze_hmem_dl_init():474<warn> Failed to dlopen libze_loader.so
+libfabric:1605793:1738921344::core:core:fi_getinfo_():1185<warn> fi_getinfo: provider ofi_rxm returned -61 (No data available)
+libfabric:1605793:1738921344::core:core:fi_getinfo_():1185<warn> fi_getinfo: provider ofi_rxd returned -61 (No data available)
+libfabric:1605793:1738921344::core:core:fi_getinfo_():1185<warn> fi_getinfo: provider ofi_rxm returned -61 (No data available)
+libfabric:1605793:1738921344::core:core:fi_getinfo_():1185<warn> fi_getinfo: provider ofi_rxd returned -61 (No data available)
+libfabric:1605793:1738921344::cxi:domain:cxip_domain_enable():142<warn> x3203c0s13b0n0: Security Issue: Using unrestricted service ID 1 for cxi0. Please provide a service ID via auth_key fields.
+# [2553557.740999] mercury->addr [error] /var/tmp/pbs.3097831.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/agueroudji/spack-stage/spack-stage-mercury-2.4.0rc5-f2ewbzqypqzpcqswav4qzh3irbomhlno/spack-src/src/mercury.c:1703 HG_Addr_self() NULL HG class
+# [2553557.741045] mercury->addr [error] /var/tmp/pbs.3097831.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/agueroudji/spack-stage/spack-stage-mercury-2.4.0rc5-f2ewbzqypqzpcqswav4qzh3irbomhlno/spack-src/src/mercury.c:1755 HG_Addr_to_string() NULL HG class
+# [2553557.741063] mercury->addr [error] /var/tmp/pbs.3097831.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/agueroudji/spack-stage/spack-stage-mercury-2.4.0rc5-f2ewbzqypqzpcqswav4qzh3irbomhlno/spack-src/src/mercury.c:1665 HG_Addr_free() NULL HG class
+libfabric:1605795:1738921346::core:core:ze_hmem_dl_init():474<warn> Failed to dlopen libze_loader.so
+libfabric:1605795:1738921346::core:core:ofi_hmem_init():339<warn> Failed to initialize hmem iface FI_HMEM_ZE: No data available
+libfabric:1605795:1738921346::core:core:ze_hmem_dl_init():474<warn> Failed to dlopen libze_loader.so
+libfabric:1605795:1738921346::core:core:ofi_hmem_init():339<warn> Failed to initialize hmem iface FI_HMEM_ZE: No data available
+libfabric:1605795:1738921346::core:core:ze_hmem_dl_init():474<warn> Failed to dlopen libze_loader.so
+libfabric:1605795:1738921346::core:core:fi_getinfo_():1185<warn> fi_getinfo: provider ofi_rxm returned -61 (No data available)
+libfabric:1605795:1738921346::core:core:fi_getinfo_():1185<warn> fi_getinfo: provider ofi_rxd returned -61 (No data available)
+libfabric:1605795:1738921346::core:core:fi_getinfo_():1185<warn> fi_getinfo: provider ofi_rxm returned -61 (No data available)
+libfabric:1605795:1738921346::core:core:fi_getinfo_():1185<warn> fi_getinfo: provider ofi_rxd returned -61 (No data available)
+libfabric:1605795:1738921346::cxi:domain:cxip_domain_enable():142<warn> x3203c0s13b0n0: Security Issue: Using unrestricted service ID 1 for cxi0. Please provide a service ID via auth_key fields.
+# [2553559.868982] mercury->addr [error] /var/tmp/pbs.3097831.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/agueroudji/spack-stage/spack-stage-mercury-2.4.0rc5-f2ewbzqypqzpcqswav4qzh3irbomhlno/spack-src/src/mercury.c:1703 HG_Addr_self() NULL HG class
+# [2553559.869023] mercury->addr [error] /var/tmp/pbs.3097831.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/agueroudji/spack-stage/spack-stage-mercury-2.4.0rc5-f2ewbzqypqzpcqswav4qzh3irbomhlno/spack-src/src/mercury.c:1755 HG_Addr_to_string() NULL HG class
+# [2553559.869041] mercury->addr [error] /var/tmp/pbs.3097831.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/agueroudji/spack-stage/spack-stage-mercury-2.4.0rc5-f2ewbzqypqzpcqswav4qzh3irbomhlno/spack-src/src/mercury.c:1665 HG_Addr_free() NULL HG class

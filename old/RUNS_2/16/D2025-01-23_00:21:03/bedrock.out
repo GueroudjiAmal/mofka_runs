@@ -1,0 +1,1071 @@
+[2025-01-23 01:45:32.192] [trace] Initializing Jx9 engine
+[2025-01-23 01:45:32.192] [trace] Parsing JSON configuration
+[2025-01-23 01:45:32.192] [trace] Parsing done
+[2025-01-23 01:45:32.192] [trace] Initializing MargoManager
+[2025-01-23 01:45:32.192] [trace] Validating JSON configuration
+[2025-01-23 01:45:32.192] [trace] Initializing Mercury
+[2025-01-23 01:45:32.310] [trace] Initializing Argobots
+[2025-01-23 01:45:32.312] [trace] Allocating margo instance
+[2025-01-23 01:45:32.312] [trace] Starting progress loop
+[2025-01-23 01:45:32.312] [trace] MargoManager initialized
+[2025-01-23 01:45:32.312] [trace] Reading Bedrock config
+[2025-01-23 01:45:32.312] [trace] Initializing ProviderManager
+[2025-01-23 01:45:32.312] [trace] ProviderManagerImpl initialized
+[2025-01-23 01:45:32.312] [trace] ProviderManager initialized
+[2025-01-23 01:45:32.312] [trace] Initialize ModuleContext
+[2025-01-23 01:45:32.312] [trace] Loading module(s) from library libmofka-bedrock-module.so
+[2025-01-23 01:45:32.344] [trace] Registering module mofka
+[2025-01-23 01:45:32.344] [trace] Loading module(s) from library libyokan-bedrock-module.so
+[2025-01-23 01:45:32.363] [trace] Registering module yokan
+[2025-01-23 01:45:32.363] [trace] Loading module(s) from library libwarabi-bedrock-module.so
+[2025-01-23 01:45:32.390] [trace] Registering module warabi
+[2025-01-23 01:45:32.390] [trace] Loading module(s) from library libflock-bedrock-module.so
+[2025-01-23 01:45:32.407] [trace] Registering module flock
+[2025-01-23 01:45:32.407] [trace] ModuleContext initialized
+[2025-01-23 01:45:32.407] [trace] Initializing DependencyFinder
+[2025-01-23 01:45:32.407] [trace] DependencyFinderImpl initialized
+[2025-01-23 01:45:32.407] [trace] DependencyFinder initialized
+[2025-01-23 01:45:32.407] [trace] Initializing providers
+[2025-01-23 01:45:32.408] [trace] Resolving dependency pool
+[2025-01-23 01:45:32.408] [trace] [flock] Registering provider with provider id 1
+[2025-01-23 01:45:32.410] [trace] [flock] Provider registered with ID 1
+[2025-01-23 01:45:32.410] [trace] Registered provider my_flock_provider of type flock with provider id 1
+[2025-01-23 01:45:32.410] [trace] Resolving dependency pool
+[2025-01-23 01:45:32.410] [trace] Resolving dependency remi_sender
+[2025-01-23 01:45:32.410] [trace] Resolving dependency remi_receiver
+[2025-01-23 01:45:32.410] [trace] [warabi:2] Registered provider with id 2
+[2025-01-23 01:45:32.410] [trace] Registered provider my_warabi_provider of type warabi with provider id 2
+[2025-01-23 01:45:32.410] [trace] Resolving dependency pool
+[2025-01-23 01:45:32.410] [trace] Resolving dependency remi_sender
+[2025-01-23 01:45:32.410] [trace] Resolving dependency remi_receiver
+[2025-01-23 01:45:32.410] [trace] [yokan] yk_provider_register:42: registering YOKAN provider with provider id 3
+[2025-01-23 01:45:32.410] [trace] [yokan] yk_provider_register:461: YOKAN provider registration done
+[2025-01-23 01:45:32.410] [trace] Registered provider my_yokan_master_provider of type yokan with provider id 3
+[2025-01-23 01:45:32.410] [trace] Resolving dependency pool
+[2025-01-23 01:45:32.410] [trace] Resolving dependency remi_sender
+[2025-01-23 01:45:32.410] [trace] Resolving dependency remi_receiver
+[2025-01-23 01:45:32.410] [trace] [yokan] yk_provider_register:42: registering YOKAN provider with provider id 4
+[2025-01-23 01:45:32.411] [trace] [yokan] yk_provider_register:461: YOKAN provider registration done
+[2025-01-23 01:45:32.411] [trace] Registered provider my_yokan_metadata_provider of type yokan with provider id 4
+[2025-01-23 01:45:32.411] [trace] Providers initialized
+[2025-01-23 01:45:32.411] [info] Bedrock daemon now running at ofi+cxi://0x20627a00
+[2025-01-23 01:45:32.411] [trace] Start waiting for finalize
+[2025-01-23 01:45:40.908] [trace] Spawning ULT thallium_generic_rpc for RPC bedrock_query_config (handle = 0x1bce8c0)
+[2025-01-23 01:45:40.908] [trace] Starting RPC bedrock_query_config (handle = 0x1bce8c0)
+[2025-01-23 01:45:40.908] [trace] Jx9Manager about to execute the following program:
+
+          $result = [];
+          foreach($__config__.providers as $p) {
+              if($p.type != "yokan") continue;
+              foreach($p.tags as $tag) {
+                  if($tag != "mofka:master") continue;
+                  array_push($result, $p.provider_id);
+              }
+          }
+          return $result;
+      
+[2025-01-23 01:45:40.909] [trace] Jx9 program returned the following value: [3]
+[2025-01-23 01:45:40.909] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:45:40.909] [trace] Spawning ULT get_identity for RPC __identity__ (handle = 0x1bce8c0)
+[2025-01-23 01:45:40.909] [trace] Starting RPC __identity__ (handle = 0x1bce8c0)
+[2025-01-23 01:45:40.909] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:45:40.909] [trace] Spawning ULT yk_put_direct_ult for RPC yk_put_direct (handle = 0x1bce8c0)
+[2025-01-23 01:45:40.909] [trace] Starting RPC yk_put_direct (handle = 0x1bce8c0)
+[2025-01-23 01:45:40.909] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:45:40.909] [trace] Spawning ULT yk_coll_create_ult for RPC yk_coll_create (handle = 0x1bce8c0)
+[2025-01-23 01:45:40.909] [trace] Starting RPC yk_coll_create (handle = 0x1bce8c0)
+[2025-01-23 01:45:40.909] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:45:44.477] [trace] Spawning ULT thallium_generic_rpc for RPC bedrock_query_config (handle = 0x1bce8c0)
+[2025-01-23 01:45:44.477] [trace] Starting RPC bedrock_query_config (handle = 0x1bce8c0)
+[2025-01-23 01:45:44.477] [trace] Jx9Manager about to execute the following program:
+
+          $result = [];
+          foreach($__config__.providers as $p) {
+              if($p.type != "yokan") continue;
+              foreach($p.tags as $tag) {
+                  if($tag != "mofka:master") continue;
+                  array_push($result, $p.provider_id);
+              }
+          }
+          return $result;
+      
+[2025-01-23 01:45:44.478] [trace] Jx9 program returned the following value: [3]
+[2025-01-23 01:45:44.478] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:45:44.478] [trace] Spawning ULT get_identity for RPC __identity__ (handle = 0x1bce8c0)
+[2025-01-23 01:45:44.478] [trace] Starting RPC __identity__ (handle = 0x1bce8c0)
+[2025-01-23 01:45:44.478] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:45:44.478] [trace] Spawning ULT thallium_generic_rpc for RPC bedrock_query_config (handle = 0x1bce8c0)
+[2025-01-23 01:45:44.478] [trace] Starting RPC bedrock_query_config (handle = 0x1bce8c0)
+[2025-01-23 01:45:44.478] [trace] Jx9Manager about to execute the following program:
+
+            return $__config__.margo.mercury.address;
+        
+[2025-01-23 01:45:44.479] [trace] Jx9 program returned the following value: ofi+cxi://0x20627a00
+[2025-01-23 01:45:44.479] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:45:44.479] [trace] Spawning ULT thallium_generic_rpc for RPC bedrock_start_provider (handle = 0x1bce8c0)
+[2025-01-23 01:45:44.479] [trace] Starting RPC bedrock_start_provider (handle = 0x1bce8c0)
+[2025-01-23 01:45:44.479] [trace] Resolving dependency pool
+[2025-01-23 01:45:44.479] [trace] [mofka:5] Registered provider 4bc57650-0235-4c4d-9431-f458baf81e77 with uuid 5
+[2025-01-23 01:45:44.479] [trace] Registered provider daq_dist_partition_4bc57650 of type mofka with provider id 5
+[2025-01-23 01:45:44.479] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:45:44.479] [trace] Spawning ULT yk_doc_store_ult for RPC yk_doc_store (handle = 0x1bce8c0)
+[2025-01-23 01:45:44.479] [trace] Starting RPC yk_doc_store (handle = 0x1bce8c0)
+[2025-01-23 01:45:44.479] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:45:48.074] [trace] Spawning ULT thallium_generic_rpc for RPC bedrock_query_config (handle = 0x1bce8c0)
+[2025-01-23 01:45:48.074] [trace] Starting RPC bedrock_query_config (handle = 0x1bce8c0)
+[2025-01-23 01:45:48.074] [trace] Jx9Manager about to execute the following program:
+
+          $result = [];
+          foreach($__config__.providers as $p) {
+              if($p.type != "yokan") continue;
+              foreach($p.tags as $tag) {
+                  if($tag != "mofka:master") continue;
+                  array_push($result, $p.provider_id);
+              }
+          }
+          return $result;
+      
+[2025-01-23 01:45:48.075] [trace] Jx9 program returned the following value: [3]
+[2025-01-23 01:45:48.075] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:45:48.075] [trace] Spawning ULT get_identity for RPC __identity__ (handle = 0x1bce8c0)
+[2025-01-23 01:45:48.075] [trace] Starting RPC __identity__ (handle = 0x1bce8c0)
+[2025-01-23 01:45:48.075] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:45:48.075] [trace] Spawning ULT yk_put_direct_ult for RPC yk_put_direct (handle = 0x1bce8c0)
+[2025-01-23 01:45:48.075] [trace] Starting RPC yk_put_direct (handle = 0x1bce8c0)
+[2025-01-23 01:45:48.075] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:45:48.075] [trace] Spawning ULT yk_coll_create_ult for RPC yk_coll_create (handle = 0x1bce8c0)
+[2025-01-23 01:45:48.075] [trace] Starting RPC yk_coll_create (handle = 0x1bce8c0)
+[2025-01-23 01:45:48.075] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:45:51.680] [trace] Spawning ULT thallium_generic_rpc for RPC bedrock_query_config (handle = 0x1bce8c0)
+[2025-01-23 01:45:51.680] [trace] Starting RPC bedrock_query_config (handle = 0x1bce8c0)
+[2025-01-23 01:45:51.680] [trace] Jx9Manager about to execute the following program:
+
+          $result = [];
+          foreach($__config__.providers as $p) {
+              if($p.type != "yokan") continue;
+              foreach($p.tags as $tag) {
+                  if($tag != "mofka:master") continue;
+                  array_push($result, $p.provider_id);
+              }
+          }
+          return $result;
+      
+[2025-01-23 01:45:51.680] [trace] Jx9 program returned the following value: [3]
+[2025-01-23 01:45:51.680] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:45:51.680] [trace] Spawning ULT get_identity for RPC __identity__ (handle = 0x1bce8c0)
+[2025-01-23 01:45:51.680] [trace] Starting RPC __identity__ (handle = 0x1bce8c0)
+[2025-01-23 01:45:51.680] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:45:51.681] [trace] Spawning ULT yk_put_direct_ult for RPC yk_put_direct (handle = 0x1bce8c0)
+[2025-01-23 01:45:51.681] [trace] Starting RPC yk_put_direct (handle = 0x1bce8c0)
+[2025-01-23 01:45:51.681] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:45:51.681] [trace] Spawning ULT yk_coll_create_ult for RPC yk_coll_create (handle = 0x1bce8c0)
+[2025-01-23 01:45:51.681] [trace] Starting RPC yk_coll_create (handle = 0x1bce8c0)
+[2025-01-23 01:45:51.681] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:45:55.261] [trace] Spawning ULT thallium_generic_rpc for RPC bedrock_query_config (handle = 0x1bce8c0)
+[2025-01-23 01:45:55.261] [trace] Starting RPC bedrock_query_config (handle = 0x1bce8c0)
+[2025-01-23 01:45:55.261] [trace] Jx9Manager about to execute the following program:
+
+          $result = [];
+          foreach($__config__.providers as $p) {
+              if($p.type != "yokan") continue;
+              foreach($p.tags as $tag) {
+                  if($tag != "mofka:master") continue;
+                  array_push($result, $p.provider_id);
+              }
+          }
+          return $result;
+      
+[2025-01-23 01:45:55.262] [trace] Jx9 program returned the following value: [3]
+[2025-01-23 01:45:55.262] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:45:55.262] [trace] Spawning ULT get_identity for RPC __identity__ (handle = 0x1bce8c0)
+[2025-01-23 01:45:55.262] [trace] Starting RPC __identity__ (handle = 0x1bce8c0)
+[2025-01-23 01:45:55.262] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:45:55.262] [trace] Spawning ULT yk_put_direct_ult for RPC yk_put_direct (handle = 0x1bce8c0)
+[2025-01-23 01:45:55.262] [trace] Starting RPC yk_put_direct (handle = 0x1bce8c0)
+[2025-01-23 01:45:55.262] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:45:55.262] [trace] Spawning ULT yk_coll_create_ult for RPC yk_coll_create (handle = 0x1bce8c0)
+[2025-01-23 01:45:55.262] [trace] Starting RPC yk_coll_create (handle = 0x1bce8c0)
+[2025-01-23 01:45:55.262] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:45:58.833] [trace] Spawning ULT thallium_generic_rpc for RPC bedrock_query_config (handle = 0x1bce8c0)
+[2025-01-23 01:45:58.833] [trace] Starting RPC bedrock_query_config (handle = 0x1bce8c0)
+[2025-01-23 01:45:58.833] [trace] Jx9Manager about to execute the following program:
+
+          $result = [];
+          foreach($__config__.providers as $p) {
+              if($p.type != "yokan") continue;
+              foreach($p.tags as $tag) {
+                  if($tag != "mofka:master") continue;
+                  array_push($result, $p.provider_id);
+              }
+          }
+          return $result;
+      
+[2025-01-23 01:45:58.833] [trace] Jx9 program returned the following value: [3]
+[2025-01-23 01:45:58.833] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:45:58.833] [trace] Spawning ULT get_identity for RPC __identity__ (handle = 0x1bce8c0)
+[2025-01-23 01:45:58.833] [trace] Starting RPC __identity__ (handle = 0x1bce8c0)
+[2025-01-23 01:45:58.833] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:45:58.833] [trace] Spawning ULT thallium_generic_rpc for RPC bedrock_query_config (handle = 0x1bce8c0)
+[2025-01-23 01:45:58.833] [trace] Starting RPC bedrock_query_config (handle = 0x1bce8c0)
+[2025-01-23 01:45:58.834] [trace] Jx9Manager about to execute the following program:
+
+            return $__config__.margo.mercury.address;
+        
+[2025-01-23 01:45:58.834] [trace] Jx9 program returned the following value: ofi+cxi://0x20627a00
+[2025-01-23 01:45:58.834] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:45:58.834] [trace] Spawning ULT thallium_generic_rpc for RPC bedrock_start_provider (handle = 0x1bce8c0)
+[2025-01-23 01:45:58.834] [trace] Starting RPC bedrock_start_provider (handle = 0x1bce8c0)
+[2025-01-23 01:45:58.834] [trace] Resolving dependency pool
+[2025-01-23 01:45:58.834] [trace] [mofka:6] Registered provider 1ba79e51-510d-4bfd-87ec-bb1606f36fda with uuid 6
+[2025-01-23 01:45:58.834] [trace] Registered provider handshake_s_d_partition_1ba79e51 of type mofka with provider id 6
+[2025-01-23 01:45:58.834] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:45:58.834] [trace] Spawning ULT yk_doc_store_ult for RPC yk_doc_store (handle = 0x1bce8c0)
+[2025-01-23 01:45:58.834] [trace] Starting RPC yk_doc_store (handle = 0x1bce8c0)
+[2025-01-23 01:45:58.834] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:46:02.432] [trace] Spawning ULT thallium_generic_rpc for RPC bedrock_query_config (handle = 0x1bce8c0)
+[2025-01-23 01:46:02.432] [trace] Starting RPC bedrock_query_config (handle = 0x1bce8c0)
+[2025-01-23 01:46:02.432] [trace] Jx9Manager about to execute the following program:
+
+          $result = [];
+          foreach($__config__.providers as $p) {
+              if($p.type != "yokan") continue;
+              foreach($p.tags as $tag) {
+                  if($tag != "mofka:master") continue;
+                  array_push($result, $p.provider_id);
+              }
+          }
+          return $result;
+      
+[2025-01-23 01:46:02.432] [trace] Jx9 program returned the following value: [3]
+[2025-01-23 01:46:02.432] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:46:02.432] [trace] Spawning ULT get_identity for RPC __identity__ (handle = 0x1bce8c0)
+[2025-01-23 01:46:02.432] [trace] Starting RPC __identity__ (handle = 0x1bce8c0)
+[2025-01-23 01:46:02.432] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:46:02.433] [trace] Spawning ULT thallium_generic_rpc for RPC bedrock_query_config (handle = 0x1bce8c0)
+[2025-01-23 01:46:02.433] [trace] Starting RPC bedrock_query_config (handle = 0x1bce8c0)
+[2025-01-23 01:46:02.433] [trace] Jx9Manager about to execute the following program:
+
+            return $__config__.margo.mercury.address;
+        
+[2025-01-23 01:46:02.433] [trace] Jx9 program returned the following value: ofi+cxi://0x20627a00
+[2025-01-23 01:46:02.433] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:46:02.433] [trace] Spawning ULT thallium_generic_rpc for RPC bedrock_start_provider (handle = 0x1bce8c0)
+[2025-01-23 01:46:02.433] [trace] Starting RPC bedrock_start_provider (handle = 0x1bce8c0)
+[2025-01-23 01:46:02.433] [trace] Resolving dependency pool
+[2025-01-23 01:46:02.433] [trace] [mofka:7] Registered provider f647a98e-9677-4abd-a0ea-b176c06f7811 with uuid 7
+[2025-01-23 01:46:02.433] [trace] Registered provider dist_sirt_partition_f647a98e of type mofka with provider id 7
+[2025-01-23 01:46:02.433] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:46:02.433] [trace] Spawning ULT yk_doc_store_ult for RPC yk_doc_store (handle = 0x1bce8c0)
+[2025-01-23 01:46:02.433] [trace] Starting RPC yk_doc_store (handle = 0x1bce8c0)
+[2025-01-23 01:46:02.434] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:46:06.013] [trace] Spawning ULT thallium_generic_rpc for RPC bedrock_query_config (handle = 0x1bce8c0)
+[2025-01-23 01:46:06.013] [trace] Starting RPC bedrock_query_config (handle = 0x1bce8c0)
+[2025-01-23 01:46:06.014] [trace] Jx9Manager about to execute the following program:
+
+          $result = [];
+          foreach($__config__.providers as $p) {
+              if($p.type != "yokan") continue;
+              foreach($p.tags as $tag) {
+                  if($tag != "mofka:master") continue;
+                  array_push($result, $p.provider_id);
+              }
+          }
+          return $result;
+      
+[2025-01-23 01:46:06.014] [trace] Jx9 program returned the following value: [3]
+[2025-01-23 01:46:06.014] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:46:06.014] [trace] Spawning ULT get_identity for RPC __identity__ (handle = 0x1bce8c0)
+[2025-01-23 01:46:06.014] [trace] Starting RPC __identity__ (handle = 0x1bce8c0)
+[2025-01-23 01:46:06.014] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:46:06.014] [trace] Spawning ULT thallium_generic_rpc for RPC bedrock_query_config (handle = 0x1bce8c0)
+[2025-01-23 01:46:06.014] [trace] Starting RPC bedrock_query_config (handle = 0x1bce8c0)
+[2025-01-23 01:46:06.015] [trace] Jx9Manager about to execute the following program:
+
+            return $__config__.margo.mercury.address;
+        
+[2025-01-23 01:46:06.015] [trace] Jx9 program returned the following value: ofi+cxi://0x20627a00
+[2025-01-23 01:46:06.015] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:46:06.015] [trace] Spawning ULT thallium_generic_rpc for RPC bedrock_start_provider (handle = 0x1bce8c0)
+[2025-01-23 01:46:06.015] [trace] Starting RPC bedrock_start_provider (handle = 0x1bce8c0)
+[2025-01-23 01:46:06.015] [trace] Resolving dependency pool
+[2025-01-23 01:46:06.015] [trace] [mofka:8] Registered provider 2dc342f9-3312-4653-8e46-ebecae492b15 with uuid 8
+[2025-01-23 01:46:06.015] [trace] Registered provider handshake_d_s_partition_2dc342f9 of type mofka with provider id 8
+[2025-01-23 01:46:06.015] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:46:06.015] [trace] Spawning ULT yk_doc_store_ult for RPC yk_doc_store (handle = 0x1bce8c0)
+[2025-01-23 01:46:06.015] [trace] Starting RPC yk_doc_store (handle = 0x1bce8c0)
+[2025-01-23 01:46:06.015] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:46:09.557] [trace] Spawning ULT thallium_generic_rpc for RPC bedrock_query_config (handle = 0x1bce8c0)
+[2025-01-23 01:46:09.557] [trace] Starting RPC bedrock_query_config (handle = 0x1bce8c0)
+[2025-01-23 01:46:09.557] [trace] Jx9Manager about to execute the following program:
+
+          $result = [];
+          foreach($__config__.providers as $p) {
+              if($p.type != "yokan") continue;
+              foreach($p.tags as $tag) {
+                  if($tag != "mofka:master") continue;
+                  array_push($result, $p.provider_id);
+              }
+          }
+          return $result;
+      
+[2025-01-23 01:46:09.558] [trace] Jx9 program returned the following value: [3]
+[2025-01-23 01:46:09.558] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:46:09.558] [trace] Spawning ULT get_identity for RPC __identity__ (handle = 0x1bce8c0)
+[2025-01-23 01:46:09.558] [trace] Starting RPC __identity__ (handle = 0x1bce8c0)
+[2025-01-23 01:46:09.558] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:46:09.558] [trace] Spawning ULT thallium_generic_rpc for RPC bedrock_query_config (handle = 0x1bce8c0)
+[2025-01-23 01:46:09.558] [trace] Starting RPC bedrock_query_config (handle = 0x1bce8c0)
+[2025-01-23 01:46:09.558] [trace] Jx9Manager about to execute the following program:
+
+            return $__config__.margo.mercury.address;
+        
+[2025-01-23 01:46:09.559] [trace] Jx9 program returned the following value: ofi+cxi://0x20627a00
+[2025-01-23 01:46:09.559] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:46:09.559] [trace] Spawning ULT thallium_generic_rpc for RPC bedrock_start_provider (handle = 0x1bce8c0)
+[2025-01-23 01:46:09.559] [trace] Starting RPC bedrock_start_provider (handle = 0x1bce8c0)
+[2025-01-23 01:46:09.559] [trace] Resolving dependency pool
+[2025-01-23 01:46:09.559] [trace] [mofka:9] Registered provider cc9777d3-b487-4b7b-a89e-9fc121625170 with uuid 9
+[2025-01-23 01:46:09.559] [trace] Registered provider dist_sirt_partition_cc9777d3 of type mofka with provider id 9
+[2025-01-23 01:46:09.559] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:46:09.559] [trace] Spawning ULT yk_doc_store_ult for RPC yk_doc_store (handle = 0x1bce8c0)
+[2025-01-23 01:46:09.559] [trace] Starting RPC yk_doc_store (handle = 0x1bce8c0)
+[2025-01-23 01:46:09.559] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:46:13.129] [trace] Spawning ULT thallium_generic_rpc for RPC bedrock_query_config (handle = 0x1bce8c0)
+[2025-01-23 01:46:13.129] [trace] Starting RPC bedrock_query_config (handle = 0x1bce8c0)
+[2025-01-23 01:46:13.129] [trace] Jx9Manager about to execute the following program:
+
+          $result = [];
+          foreach($__config__.providers as $p) {
+              if($p.type != "yokan") continue;
+              foreach($p.tags as $tag) {
+                  if($tag != "mofka:master") continue;
+                  array_push($result, $p.provider_id);
+              }
+          }
+          return $result;
+      
+[2025-01-23 01:46:13.130] [trace] Jx9 program returned the following value: [3]
+[2025-01-23 01:46:13.130] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:46:13.130] [trace] Spawning ULT get_identity for RPC __identity__ (handle = 0x1bce8c0)
+[2025-01-23 01:46:13.130] [trace] Starting RPC __identity__ (handle = 0x1bce8c0)
+[2025-01-23 01:46:13.130] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:46:13.130] [trace] Spawning ULT thallium_generic_rpc for RPC bedrock_query_config (handle = 0x1bce8c0)
+[2025-01-23 01:46:13.130] [trace] Starting RPC bedrock_query_config (handle = 0x1bce8c0)
+[2025-01-23 01:46:13.130] [trace] Jx9Manager about to execute the following program:
+
+            return $__config__.margo.mercury.address;
+        
+[2025-01-23 01:46:13.131] [trace] Jx9 program returned the following value: ofi+cxi://0x20627a00
+[2025-01-23 01:46:13.131] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:46:13.131] [trace] Spawning ULT thallium_generic_rpc for RPC bedrock_start_provider (handle = 0x1bce8c0)
+[2025-01-23 01:46:13.131] [trace] Starting RPC bedrock_start_provider (handle = 0x1bce8c0)
+[2025-01-23 01:46:13.131] [trace] Resolving dependency pool
+[2025-01-23 01:46:13.131] [trace] [mofka:10] Registered provider 1791a71a-b1c3-4639-8592-971be307f2b4 with uuid 10
+[2025-01-23 01:46:13.131] [trace] Registered provider handshake_d_s_partition_1791a71a of type mofka with provider id 10
+[2025-01-23 01:46:13.131] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:46:13.131] [trace] Spawning ULT yk_doc_store_ult for RPC yk_doc_store (handle = 0x1bce8c0)
+[2025-01-23 01:46:13.131] [trace] Starting RPC yk_doc_store (handle = 0x1bce8c0)
+[2025-01-23 01:46:13.131] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:46:16.700] [trace] Spawning ULT thallium_generic_rpc for RPC bedrock_query_config (handle = 0x1bce8c0)
+[2025-01-23 01:46:16.700] [trace] Starting RPC bedrock_query_config (handle = 0x1bce8c0)
+[2025-01-23 01:46:16.701] [trace] Jx9Manager about to execute the following program:
+
+          $result = [];
+          foreach($__config__.providers as $p) {
+              if($p.type != "yokan") continue;
+              foreach($p.tags as $tag) {
+                  if($tag != "mofka:master") continue;
+                  array_push($result, $p.provider_id);
+              }
+          }
+          return $result;
+      
+[2025-01-23 01:46:16.701] [trace] Jx9 program returned the following value: [3]
+[2025-01-23 01:46:16.701] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:46:16.701] [trace] Spawning ULT get_identity for RPC __identity__ (handle = 0x1bce8c0)
+[2025-01-23 01:46:16.701] [trace] Starting RPC __identity__ (handle = 0x1bce8c0)
+[2025-01-23 01:46:16.701] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:46:16.701] [trace] Spawning ULT yk_put_direct_ult for RPC yk_put_direct (handle = 0x1bce8c0)
+[2025-01-23 01:46:16.701] [trace] Starting RPC yk_put_direct (handle = 0x1bce8c0)
+[2025-01-23 01:46:16.701] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:46:16.702] [trace] Spawning ULT yk_coll_create_ult for RPC yk_coll_create (handle = 0x1bce8c0)
+[2025-01-23 01:46:16.702] [trace] Starting RPC yk_coll_create (handle = 0x1bce8c0)
+[2025-01-23 01:46:16.702] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:46:20.285] [trace] Spawning ULT thallium_generic_rpc for RPC bedrock_query_config (handle = 0x1bce8c0)
+[2025-01-23 01:46:20.285] [trace] Starting RPC bedrock_query_config (handle = 0x1bce8c0)
+[2025-01-23 01:46:20.286] [trace] Jx9Manager about to execute the following program:
+
+          $result = [];
+          foreach($__config__.providers as $p) {
+              if($p.type != "yokan") continue;
+              foreach($p.tags as $tag) {
+                  if($tag != "mofka:master") continue;
+                  array_push($result, $p.provider_id);
+              }
+          }
+          return $result;
+      
+[2025-01-23 01:46:20.286] [trace] Jx9 program returned the following value: [3]
+[2025-01-23 01:46:20.286] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:46:20.286] [trace] Spawning ULT get_identity for RPC __identity__ (handle = 0x1bce8c0)
+[2025-01-23 01:46:20.286] [trace] Starting RPC __identity__ (handle = 0x1bce8c0)
+[2025-01-23 01:46:20.286] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:46:20.286] [trace] Spawning ULT thallium_generic_rpc for RPC bedrock_query_config (handle = 0x1bce8c0)
+[2025-01-23 01:46:20.286] [trace] Starting RPC bedrock_query_config (handle = 0x1bce8c0)
+[2025-01-23 01:46:20.287] [trace] Jx9Manager about to execute the following program:
+
+            return $__config__.margo.mercury.address;
+        
+[2025-01-23 01:46:20.287] [trace] Jx9 program returned the following value: ofi+cxi://0x20627a00
+[2025-01-23 01:46:20.287] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:46:20.287] [trace] Spawning ULT thallium_generic_rpc for RPC bedrock_start_provider (handle = 0x1bce8c0)
+[2025-01-23 01:46:20.287] [trace] Starting RPC bedrock_start_provider (handle = 0x1bce8c0)
+[2025-01-23 01:46:20.287] [trace] Resolving dependency pool
+[2025-01-23 01:46:20.287] [trace] [mofka:11] Registered provider cb0a1173-abe3-4eb5-9aac-66757dde79d8 with uuid 11
+[2025-01-23 01:46:20.287] [trace] Registered provider sirt_den_partition_cb0a1173 of type mofka with provider id 11
+[2025-01-23 01:46:20.287] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:46:20.287] [trace] Spawning ULT yk_doc_store_ult for RPC yk_doc_store (handle = 0x1bce8c0)
+[2025-01-23 01:46:20.287] [trace] Starting RPC yk_doc_store (handle = 0x1bce8c0)
+[2025-01-23 01:46:20.287] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:46:20.990] [trace] Spawning ULT thallium_generic_rpc for RPC bedrock_query_config (handle = 0x1bce8c0)
+[2025-01-23 01:46:20.990] [trace] Starting RPC bedrock_query_config (handle = 0x1bce8c0)
+[2025-01-23 01:46:20.990] [trace] Jx9Manager about to execute the following program:
+
+          $result = [];
+          foreach($__config__.providers as $p) {
+              if($p.type != "yokan") continue;
+              foreach($p.tags as $tag) {
+                  if($tag != "mofka:master") continue;
+                  array_push($result, $p.provider_id);
+              }
+          }
+          return $result;
+      
+[2025-01-23 01:46:20.991] [trace] Jx9 program returned the following value: [3]
+[2025-01-23 01:46:20.991] [trace] Spawning ULT thallium_generic_rpc for RPC bedrock_query_config (handle = 0x1bcdee0)
+[2025-01-23 01:46:20.991] [trace] Starting RPC bedrock_query_config (handle = 0x1bcdee0)
+[2025-01-23 01:46:20.991] [trace] Jx9Manager about to execute the following program:
+
+          $result = [];
+          foreach($__config__.providers as $p) {
+              if($p.type != "yokan") continue;
+              foreach($p.tags as $tag) {
+                  if($tag != "mofka:master") continue;
+                  array_push($result, $p.provider_id);
+              }
+          }
+          return $result;
+      
+[2025-01-23 01:46:20.992] [trace] Jx9 program returned the following value: [3]
+[2025-01-23 01:46:20.992] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:46:20.992] [trace] RPC completed (handle = 0x1bcdee0)
+[2025-01-23 01:46:21.030] [trace] Spawning ULT get_identity for RPC __identity__ (handle = 0x1bcdee0)
+[2025-01-23 01:46:21.030] [trace] Starting RPC __identity__ (handle = 0x1bcdee0)
+[2025-01-23 01:46:21.030] [trace] RPC completed (handle = 0x1bcdee0)
+[2025-01-23 01:46:21.030] [trace] Spawning ULT get_identity for RPC __identity__ (handle = 0x1bcdee0)
+[2025-01-23 01:46:21.030] [trace] Starting RPC __identity__ (handle = 0x1bcdee0)
+[2025-01-23 01:46:21.030] [trace] RPC completed (handle = 0x1bcdee0)
+[2025-01-23 01:46:21.038] [trace] Spawning ULT yk_length_direct_ult for RPC yk_length_direct (handle = 0x1bcdee0)
+[2025-01-23 01:46:21.038] [trace] Starting RPC yk_length_direct (handle = 0x1bcdee0)
+[2025-01-23 01:46:21.038] [trace] RPC completed (handle = 0x1bcdee0)
+[2025-01-23 01:46:21.038] [trace] Spawning ULT yk_length_direct_ult for RPC yk_length_direct (handle = 0x1bcdee0)
+[2025-01-23 01:46:21.038] [trace] Starting RPC yk_length_direct (handle = 0x1bcdee0)
+[2025-01-23 01:46:21.038] [trace] RPC completed (handle = 0x1bcdee0)
+[2025-01-23 01:46:21.069] [trace] Spawning ULT yk_get_ult for RPC yk_get (handle = 0x1bcdee0)
+[2025-01-23 01:46:21.069] [trace] Starting RPC yk_get (handle = 0x1bcdee0)
+[2025-01-23 01:46:21.070] [trace] Spawning ULT yk_get_ult for RPC yk_get (handle = 0x1bce8c0)
+[2025-01-23 01:46:21.070] [trace] Starting RPC yk_get (handle = 0x1bce8c0)
+[2025-01-23 01:46:21.070] [trace] RPC completed (handle = 0x1bcdee0)
+[2025-01-23 01:46:21.070] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:46:21.101] [trace] Spawning ULT yk_doc_iter_ult for RPC yk_doc_iter (handle = 0x1bce8c0)
+[2025-01-23 01:46:21.101] [trace] Spawning ULT yk_doc_iter_ult for RPC yk_doc_iter (handle = 0x1bcdee0)
+[2025-01-23 01:46:21.101] [trace] Starting RPC yk_doc_iter (handle = 0x1bce8c0)
+[2025-01-23 01:46:21.102] [trace] Starting RPC yk_doc_iter (handle = 0x1bcdee0)
+[2025-01-23 01:46:21.133] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:46:21.133] [trace] RPC completed (handle = 0x1bcdee0)
+[2025-01-23 01:46:21.165] [trace] Spawning ULT yk_doc_iter_ult for RPC yk_doc_iter (handle = 0x1bcdee0)
+[2025-01-23 01:46:21.165] [trace] Starting RPC yk_doc_iter (handle = 0x1bcdee0)
+[2025-01-23 01:46:21.165] [trace] Spawning ULT yk_doc_iter_ult for RPC yk_doc_iter (handle = 0x1bce8c0)
+[2025-01-23 01:46:21.165] [trace] Starting RPC yk_doc_iter (handle = 0x1bce8c0)
+[2025-01-23 01:46:21.165] [trace] RPC completed (handle = 0x1bcdee0)
+[2025-01-23 01:46:21.165] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:46:21.198] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bce8c0)
+[2025-01-23 01:46:21.198] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bce8c0)
+[2025-01-23 01:46:21.198] [trace] [mofka:6] Received receiveBatch request
+[2025-01-23 01:46:21.199] [trace] [mofka:6] Successfully executed receiveBatch
+[2025-01-23 01:46:21.199] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:46:21.199] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bce8c0)
+[2025-01-23 01:46:21.199] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bce8c0)
+[2025-01-23 01:46:21.199] [trace] [mofka:6] Received receiveBatch request
+[2025-01-23 01:46:21.199] [trace] [mofka:6] Successfully executed receiveBatch
+[2025-01-23 01:46:21.199] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:46:21.221] [trace] Spawning ULT yk_length_direct_ult for RPC yk_length_direct (handle = 0x1bce8c0)
+[2025-01-23 01:46:21.221] [trace] Starting RPC yk_length_direct (handle = 0x1bce8c0)
+[2025-01-23 01:46:21.221] [trace] Spawning ULT yk_length_direct_ult for RPC yk_length_direct (handle = 0x1bcdee0)
+[2025-01-23 01:46:21.221] [trace] Starting RPC yk_length_direct (handle = 0x1bcdee0)
+[2025-01-23 01:46:21.221] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:46:21.221] [trace] RPC completed (handle = 0x1bcdee0)
+[2025-01-23 01:46:21.253] [trace] Spawning ULT yk_get_ult for RPC yk_get (handle = 0x1bcdee0)
+[2025-01-23 01:46:21.253] [trace] Starting RPC yk_get (handle = 0x1bcdee0)
+[2025-01-23 01:46:21.253] [trace] Spawning ULT yk_get_ult for RPC yk_get (handle = 0x1bce8c0)
+[2025-01-23 01:46:21.253] [trace] Starting RPC yk_get (handle = 0x1bce8c0)
+[2025-01-23 01:46:21.253] [trace] RPC completed (handle = 0x1bcdee0)
+[2025-01-23 01:46:21.253] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:46:21.285] [trace] Spawning ULT yk_doc_iter_ult for RPC yk_doc_iter (handle = 0x1bce8c0)
+[2025-01-23 01:46:21.285] [trace] Starting RPC yk_doc_iter (handle = 0x1bce8c0)
+[2025-01-23 01:46:21.285] [trace] Spawning ULT yk_doc_iter_ult for RPC yk_doc_iter (handle = 0x1bcdee0)
+[2025-01-23 01:46:21.285] [trace] Starting RPC yk_doc_iter (handle = 0x1bcdee0)
+[2025-01-23 01:46:21.317] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:46:21.317] [trace] RPC completed (handle = 0x1bcdee0)
+[2025-01-23 01:46:21.353] [trace] Spawning ULT yk_doc_iter_ult for RPC yk_doc_iter (handle = 0x1bcdee0)
+[2025-01-23 01:46:21.353] [trace] Starting RPC yk_doc_iter (handle = 0x1bcdee0)
+[2025-01-23 01:46:21.353] [trace] Spawning ULT yk_doc_iter_ult for RPC yk_doc_iter (handle = 0x1bce8c0)
+[2025-01-23 01:46:21.353] [trace] Starting RPC yk_doc_iter (handle = 0x1bce8c0)
+[2025-01-23 01:46:21.353] [trace] RPC completed (handle = 0x1bcdee0)
+[2025-01-23 01:46:21.353] [trace] RPC completed (handle = 0x1bce8c0)
+[2025-01-23 01:46:21.377] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_consumer_request_events (handle = 0x1bce8c0)
+[2025-01-23 01:46:21.377] [trace] Starting RPC mofka_consumer_request_events (handle = 0x1bce8c0)
+[2025-01-23 01:46:21.377] [trace] [mofka:10] Received requestEvents request
+[2025-01-23 01:46:21.377] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_consumer_request_events (handle = 0x1bcdee0)
+[2025-01-23 01:46:21.377] [trace] Starting RPC mofka_consumer_request_events (handle = 0x1bcdee0)
+[2025-01-23 01:46:21.377] [trace] [mofka:8] Received requestEvents request
+[2025-01-23 01:46:22.515] [trace] Spawning ULT thallium_generic_rpc for RPC bedrock_query_config (handle = 0x1bcd500)
+[2025-01-23 01:46:22.515] [trace] Starting RPC bedrock_query_config (handle = 0x1bcd500)
+[2025-01-23 01:46:22.516] [trace] Jx9Manager about to execute the following program:
+
+          $result = [];
+          foreach($__config__.providers as $p) {
+              if($p.type != "yokan") continue;
+              foreach($p.tags as $tag) {
+                  if($tag != "mofka:master") continue;
+                  array_push($result, $p.provider_id);
+              }
+          }
+          return $result;
+      
+[2025-01-23 01:46:22.516] [trace] Jx9 program returned the following value: [3]
+[2025-01-23 01:46:22.516] [trace] RPC completed (handle = 0x1bcd500)
+[2025-01-23 01:46:22.560] [trace] Spawning ULT get_identity for RPC __identity__ (handle = 0x1bcd500)
+[2025-01-23 01:46:22.560] [trace] Starting RPC __identity__ (handle = 0x1bcd500)
+[2025-01-23 01:46:22.560] [trace] RPC completed (handle = 0x1bcd500)
+[2025-01-23 01:46:22.572] [trace] Spawning ULT yk_length_direct_ult for RPC yk_length_direct (handle = 0x1bcd500)
+[2025-01-23 01:46:22.572] [trace] Starting RPC yk_length_direct (handle = 0x1bcd500)
+[2025-01-23 01:46:22.572] [trace] RPC completed (handle = 0x1bcd500)
+[2025-01-23 01:46:22.604] [trace] Spawning ULT yk_get_ult for RPC yk_get (handle = 0x1bcd500)
+[2025-01-23 01:46:22.604] [trace] Starting RPC yk_get (handle = 0x1bcd500)
+[2025-01-23 01:46:22.604] [trace] RPC completed (handle = 0x1bcd500)
+[2025-01-23 01:46:22.636] [trace] Spawning ULT yk_doc_iter_ult for RPC yk_doc_iter (handle = 0x1bcd500)
+[2025-01-23 01:46:22.636] [trace] Starting RPC yk_doc_iter (handle = 0x1bcd500)
+[2025-01-23 01:46:22.668] [trace] RPC completed (handle = 0x1bcd500)
+[2025-01-23 01:46:22.692] [trace] Spawning ULT yk_doc_iter_ult for RPC yk_doc_iter (handle = 0x1bcd500)
+[2025-01-23 01:46:22.692] [trace] Starting RPC yk_doc_iter (handle = 0x1bcd500)
+[2025-01-23 01:46:22.692] [trace] RPC completed (handle = 0x1bcd500)
+[2025-01-23 01:46:22.704] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_consumer_request_events (handle = 0x1bcd500)
+[2025-01-23 01:46:22.704] [trace] Starting RPC mofka_consumer_request_events (handle = 0x1bcd500)
+[2025-01-23 01:46:22.704] [trace] [mofka:11] Received requestEvents request
+[2025-01-23 01:46:27.416] [trace] Spawning ULT thallium_generic_rpc for RPC bedrock_query_config (handle = 0x1bccb20)
+[2025-01-23 01:46:27.416] [trace] Starting RPC bedrock_query_config (handle = 0x1bccb20)
+[2025-01-23 01:46:27.416] [trace] Jx9Manager about to execute the following program:
+
+          $result = [];
+          foreach($__config__.providers as $p) {
+              if($p.type != "yokan") continue;
+              foreach($p.tags as $tag) {
+                  if($tag != "mofka:master") continue;
+                  array_push($result, $p.provider_id);
+              }
+          }
+          return $result;
+      
+[2025-01-23 01:46:27.417] [trace] Jx9 program returned the following value: [3]
+[2025-01-23 01:46:27.417] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:46:27.480] [trace] Spawning ULT get_identity for RPC __identity__ (handle = 0x1bccb20)
+[2025-01-23 01:46:27.480] [trace] Starting RPC __identity__ (handle = 0x1bccb20)
+[2025-01-23 01:46:27.480] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:46:27.512] [trace] Spawning ULT yk_length_direct_ult for RPC yk_length_direct (handle = 0x1bccb20)
+[2025-01-23 01:46:27.512] [trace] Starting RPC yk_length_direct (handle = 0x1bccb20)
+[2025-01-23 01:46:27.512] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:46:27.576] [trace] Spawning ULT yk_get_ult for RPC yk_get (handle = 0x1bccb20)
+[2025-01-23 01:46:27.576] [trace] Starting RPC yk_get (handle = 0x1bccb20)
+[2025-01-23 01:46:27.576] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:46:27.608] [trace] Spawning ULT yk_doc_iter_ult for RPC yk_doc_iter (handle = 0x1bccb20)
+[2025-01-23 01:46:27.608] [trace] Starting RPC yk_doc_iter (handle = 0x1bccb20)
+[2025-01-23 01:46:27.640] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:46:27.672] [trace] Spawning ULT yk_doc_iter_ult for RPC yk_doc_iter (handle = 0x1bccb20)
+[2025-01-23 01:46:27.672] [trace] Starting RPC yk_doc_iter (handle = 0x1bccb20)
+[2025-01-23 01:46:27.672] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:46:37.679] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:46:37.679] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:46:37.679] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:46:37.679] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:46:37.679] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:46:47.326] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:46:47.326] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:46:47.326] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:46:47.326] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:46:47.326] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:46:56.974] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:46:56.974] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:46:56.974] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:46:56.974] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:46:56.974] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:47:06.650] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:47:06.650] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:47:06.650] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:47:06.651] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:47:06.651] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:47:16.298] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:47:16.298] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:47:16.298] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:47:16.298] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:47:16.298] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:47:25.946] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:47:25.946] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:47:25.946] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:47:25.946] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:47:25.946] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:47:35.594] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:47:35.594] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:47:35.594] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:47:35.594] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:47:35.594] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:47:45.242] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:47:45.242] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:47:45.242] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:47:45.243] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:47:45.243] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:47:54.890] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:47:54.890] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:47:54.890] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:47:54.890] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:47:54.890] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:48:04.538] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:48:04.538] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:48:04.538] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:48:04.538] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:48:04.538] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:48:14.186] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:48:14.186] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:48:14.186] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:48:14.186] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:48:14.186] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:48:23.834] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:48:23.834] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:48:23.834] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:48:23.834] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:48:23.834] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:48:33.482] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:48:33.482] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:48:33.482] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:48:33.482] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:48:33.482] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:48:43.130] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:48:43.130] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:48:43.130] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:48:43.130] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:48:43.130] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:48:52.778] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:48:52.778] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:48:52.778] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:48:52.778] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:48:52.778] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:49:02.426] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:49:02.426] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:49:02.426] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:49:02.427] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:49:02.427] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:49:12.104] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:49:12.104] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:49:12.104] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:49:12.104] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:49:12.104] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:49:21.754] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:49:21.754] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:49:21.754] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:49:21.754] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:49:21.754] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:49:31.402] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:49:31.402] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:49:31.402] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:49:31.402] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:49:31.402] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:49:41.050] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:49:41.050] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:49:41.050] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:49:41.050] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:49:41.050] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:49:50.698] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:49:50.698] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:49:50.698] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:49:50.698] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:49:50.698] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:50:00.346] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:50:00.346] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:50:00.346] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:50:00.346] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:50:00.346] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:50:09.994] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:50:09.994] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:50:09.994] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:50:09.994] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:50:09.994] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:50:19.642] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:50:19.642] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:50:19.642] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:50:19.642] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:50:19.642] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:50:29.290] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:50:29.290] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:50:29.290] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:50:29.290] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:50:29.290] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:50:38.938] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:50:38.938] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:50:38.938] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:50:38.938] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:50:38.938] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:50:48.586] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:50:48.586] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:50:48.586] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:50:48.586] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:50:48.586] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:50:58.234] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:50:58.234] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:50:58.234] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:50:58.234] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:50:58.234] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:51:07.882] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:51:07.882] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:51:07.882] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:51:07.882] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:51:07.882] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:51:17.530] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:51:17.530] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:51:17.530] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:51:17.530] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:51:17.530] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:51:27.178] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:51:27.178] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:51:27.178] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:51:27.178] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:51:27.178] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:51:36.826] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:51:36.826] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:51:36.826] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:51:36.827] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:51:36.827] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:51:46.474] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:51:46.474] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:51:46.474] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:51:46.474] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:51:46.474] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:51:56.122] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:51:56.122] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:51:56.122] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:51:56.122] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:51:56.122] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:52:05.770] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:52:05.770] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:52:05.770] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:52:05.770] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:52:05.770] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:52:15.418] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:52:15.418] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:52:15.418] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:52:15.418] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:52:15.418] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:52:25.098] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:52:25.098] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:52:25.098] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:52:25.098] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:52:25.098] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:52:34.746] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:52:34.746] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:52:34.746] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:52:34.746] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:52:34.746] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:52:44.394] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:52:44.394] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:52:44.394] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:52:44.394] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:52:44.394] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:52:54.042] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:52:54.042] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:52:54.042] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:52:54.042] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:52:54.042] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:53:03.690] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:53:03.690] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:53:03.690] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:53:03.690] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:53:03.690] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:53:13.338] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:53:13.338] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:53:13.338] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:53:13.338] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:53:13.338] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:53:22.986] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:53:22.986] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:53:22.986] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:53:22.986] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:53:22.986] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:53:32.634] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:53:32.634] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:53:32.634] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:53:32.634] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:53:32.634] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:53:42.282] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:53:42.282] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:53:42.282] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:53:42.282] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:53:42.282] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:53:51.930] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:53:51.930] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:53:51.930] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:53:51.930] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:53:51.930] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:54:01.578] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:54:01.578] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:54:01.578] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:54:01.578] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:54:01.578] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:54:11.226] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:54:11.226] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:54:11.226] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:54:11.226] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:54:11.226] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:54:20.874] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:54:20.874] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:54:20.874] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:54:20.874] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:54:20.874] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:54:30.552] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:54:30.552] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:54:30.552] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:54:30.552] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:54:30.552] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:54:40.202] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:54:40.202] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:54:40.202] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:54:40.202] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:54:40.202] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:54:49.850] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:54:49.850] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:54:49.850] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:54:49.850] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:54:49.850] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:54:59.498] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:54:59.498] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:54:59.498] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:54:59.498] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:54:59.498] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:55:09.146] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:55:09.146] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:55:09.146] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:55:09.146] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:55:09.146] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:55:18.794] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:55:18.794] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:55:18.794] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:55:18.794] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:55:18.794] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:55:28.442] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:55:28.442] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:55:28.442] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:55:28.442] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:55:28.442] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:55:38.090] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:55:38.090] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:55:38.090] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:55:38.090] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:55:38.090] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:55:47.738] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:55:47.738] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:55:47.738] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:55:47.738] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:55:47.738] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:55:57.386] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:55:57.386] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:55:57.386] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:55:57.386] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:55:57.386] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:56:07.034] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:56:07.034] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:56:07.034] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:56:07.034] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:56:07.034] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:56:16.682] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:56:16.682] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:56:16.682] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:56:16.682] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:56:16.682] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:56:26.330] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:56:26.330] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:56:26.330] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:56:26.330] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:56:26.330] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:56:35.978] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:56:35.978] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:56:35.978] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:56:35.978] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:56:35.978] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:56:45.626] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:56:45.626] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:56:45.626] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:56:45.629] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:56:45.629] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:56:55.278] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:56:55.278] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:56:55.278] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:56:55.278] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:56:55.278] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:57:04.926] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:57:04.926] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:57:04.926] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:57:04.926] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:57:04.926] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:57:14.574] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:57:14.574] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:57:14.574] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:57:14.574] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:57:14.574] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:57:24.222] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:57:24.222] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:57:24.222] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:57:24.222] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:57:24.222] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:57:33.870] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:57:33.870] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:57:33.870] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:57:33.870] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:57:33.870] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:57:43.518] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:57:43.518] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:57:43.518] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:57:43.518] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:57:43.518] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:57:53.166] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:57:53.166] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:57:53.166] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:57:53.166] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:57:53.166] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:58:02.814] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:58:02.814] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:58:02.814] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:58:02.814] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:58:02.814] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:58:12.462] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:58:12.462] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:58:12.462] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:58:12.462] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:58:12.462] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:58:22.110] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:58:22.110] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:58:22.110] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:58:22.110] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:58:22.110] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:58:31.758] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:58:31.758] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:58:31.758] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:58:31.758] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:58:31.758] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:58:41.406] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:58:41.406] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:58:41.406] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:58:41.406] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:58:41.406] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:58:51.054] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:58:51.054] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:58:51.054] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:58:51.054] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:58:51.054] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:59:00.732] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:59:00.732] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:59:00.732] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:59:00.732] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:59:00.733] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:59:10.382] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:59:10.382] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:59:10.382] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:59:10.382] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:59:10.382] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:59:20.030] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:59:20.030] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:59:20.030] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:59:20.030] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:59:20.030] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:59:29.678] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:59:29.678] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:59:29.678] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:59:29.678] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:59:29.678] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:59:39.326] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:59:39.326] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:59:39.326] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:59:39.326] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:59:39.326] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:59:48.974] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:59:48.974] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:59:48.974] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:59:48.974] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:59:48.974] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 01:59:58.650] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:59:58.650] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 01:59:58.650] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 01:59:58.650] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 01:59:58.650] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 02:00:08.298] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 02:00:08.298] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 02:00:08.298] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 02:00:08.298] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 02:00:08.298] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 02:00:17.946] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 02:00:17.946] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 02:00:17.946] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 02:00:17.946] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 02:00:17.946] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 02:00:27.594] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 02:00:27.594] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 02:00:27.594] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 02:00:27.594] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 02:00:27.594] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 02:00:37.242] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 02:00:37.242] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 02:00:37.242] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 02:00:37.242] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 02:00:37.242] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 02:00:46.890] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 02:00:46.890] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 02:00:46.890] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 02:00:46.890] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 02:00:46.890] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 02:00:56.538] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 02:00:56.538] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 02:00:56.538] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 02:00:56.538] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 02:00:56.538] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 02:01:06.186] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 02:01:06.186] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 02:01:06.186] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 02:01:06.186] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 02:01:06.186] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 02:01:15.834] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 02:01:15.834] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 02:01:15.834] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 02:01:15.834] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 02:01:15.834] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 02:01:25.482] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 02:01:25.482] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 02:01:25.482] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 02:01:25.482] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 02:01:25.482] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 02:01:33.729] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 02:01:33.729] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 02:01:33.729] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 02:01:33.730] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 02:01:33.730] [trace] RPC completed (handle = 0x1bccb20)
+[2025-01-23 02:01:33.793] [trace] Spawning ULT thallium_generic_rpc for RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 02:01:33.793] [trace] Starting RPC mofka_producer_send_batch (handle = 0x1bccb20)
+[2025-01-23 02:01:33.793] [trace] [mofka:5] Received receiveBatch request
+[2025-01-23 02:01:33.793] [trace] [mofka:5] Successfully executed receiveBatch
+[2025-01-23 02:01:33.793] [trace] RPC completed (handle = 0x1bccb20)

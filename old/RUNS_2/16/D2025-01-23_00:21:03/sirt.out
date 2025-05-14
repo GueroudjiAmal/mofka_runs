@@ -1,0 +1,15 @@
+MPI rank:1; MPI size:2
+MPI rank:0; MPI size:2
+Output file path=./output.h5
+Output dir path=.
+Recon. dataset path=/data
+Center value=1427
+Number of threads per process=4
+Write frequency=4
+Window length=4
+Window step=4
+Window iter=1
+Publish frequency=0
+Mofka Protocol=cxi
+Mofka batchsize=16
+Group file=mofka.json

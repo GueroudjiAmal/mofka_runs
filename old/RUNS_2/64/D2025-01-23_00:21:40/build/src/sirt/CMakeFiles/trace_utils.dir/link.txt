@@ -1,0 +1,1 @@
+/opt/cray/pe/craype/2.7.30/bin/CC -fPIC  -Wall -Wextra -Werror -Wno-unused-but-set-variable -Wno-unused-variable -g -O0 -Wall -Wextra -shared -Wl,-soname,libtrace_utils.so -o libtrace_utils.so CMakeFiles/trace_utils.dir/__/tracelib/trace_utils.cc.o 

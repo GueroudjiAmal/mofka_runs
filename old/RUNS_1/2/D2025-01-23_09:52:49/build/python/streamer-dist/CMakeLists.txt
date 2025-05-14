@@ -1,0 +1,1 @@
+find_package(Python3 REQUIRED COMPONENTS Interpreter Development NumPy)

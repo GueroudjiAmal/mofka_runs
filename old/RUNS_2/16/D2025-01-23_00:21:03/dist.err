@@ -1,0 +1,14 @@
+[error] Could not initialize hg_class with protocol ofi+cxi
+Traceback (most recent call last):
+  File "/lus/eagle/projects/radix-io/agueroudji/RUNS/16/D2025-01-23_00:21:03/./build/python/streamer-dist/ModDistStreamPubDemo.py", line 206, in <module>
+    main()
+  File "/lus/eagle/projects/radix-io/agueroudji/RUNS/16/D2025-01-23_00:21:03/./build/python/streamer-dist/ModDistStreamPubDemo.py", line 63, in main
+    mofka_dist = MofkaDist(group_file=args.group_file, batchsize=args.batchsize)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/lus/eagle/projects/radix-io/agueroudji/RUNS/16/D2025-01-23_00:21:03/build/python/streamer-dist/mofka_dist.py", line 74, in __init__
+    self.driver = mofka.MofkaDriver(group_file, use_progress_thread=True)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agueroudji/spack/var/spack/environments/APS_VAL/.spack-env/view/lib/python3.11/site-packages/mochi/mofka/client.py", line 51, in __init__
+    super().__init__(group_file, use_progress_thread=use_progress_thread)
+pymofka_client.Exception: [/home/agueroudji/spack/opt/spack/linux-sles15-zen3/gcc-12.3.0/mochi-thallium-0.14.6-pz6zmztwxcozdqcgm2pvctikkl3ee2lt/include/thallium/engine.hpp:149][margo_init_ext] Could not initialize Margo
+x3110c0s7b0n0.hsn.cm.polaris.alcf.anl.gov: rank 0 exited with code 1

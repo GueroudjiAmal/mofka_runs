@@ -1,0 +1,1 @@
+/opt/cray/pe/craype/2.7.30/bin/CC -fPIC  -Wall -Wextra -Werror -Wno-unused-but-set-variable -Wno-unused-variable -g -O0 -Wall -Wextra -shared -Wl,-soname,libsirt.so -o libsirt.so CMakeFiles/sirt.dir/sirt.cc.o 
