@@ -1,0 +1,16 @@
+x3208c0s7b1n0.hsn.cm.polaris.alcf.anl.gov 1:  --------------------------
+x3208c0s7b1n0.hsn.cm.polaris.alcf.anl.gov 1:  ID: 1 (DEFAULT)
+x3208c0s7b1n0.hsn.cm.polaris.alcf.anl.gov 1:    Enabled            : Yes
+x3208c0s7b1n0.hsn.cm.polaris.alcf.anl.gov 1:    System Service     : No
+x3208c0s7b1n0.hsn.cm.polaris.alcf.anl.gov 1:    Restricted Members : No
+x3208c0s7b1n0.hsn.cm.polaris.alcf.anl.gov 1:    Restricted VNIs    : Yes
+x3208c0s7b1n0.hsn.cm.polaris.alcf.anl.gov 1:    Restricted TCs     : No
+x3208c0s7b1n0.hsn.cm.polaris.alcf.anl.gov 1:    Resource Limits    : Yes
+x3208c0s7b0n0.hsn.cm.polaris.alcf.anl.gov 0:  --------------------------
+x3208c0s7b0n0.hsn.cm.polaris.alcf.anl.gov 0:  ID: 1 (DEFAULT)
+x3208c0s7b0n0.hsn.cm.polaris.alcf.anl.gov 0:    Enabled            : Yes
+x3208c0s7b0n0.hsn.cm.polaris.alcf.anl.gov 0:    System Service     : No
+x3208c0s7b0n0.hsn.cm.polaris.alcf.anl.gov 0:    Restricted Members : No
+x3208c0s7b0n0.hsn.cm.polaris.alcf.anl.gov 0:    Restricted VNIs    : Yes
+x3208c0s7b0n0.hsn.cm.polaris.alcf.anl.gov 0:    Restricted TCs     : No
+x3208c0s7b0n0.hsn.cm.polaris.alcf.anl.gov 0:    Resource Limits    : Yes

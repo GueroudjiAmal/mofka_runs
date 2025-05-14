@@ -1,0 +1,26 @@
+libfabric:2729145:1738921539::core:core:ze_hmem_dl_init():474<warn> Failed to dlopen libze_loader.so
+libfabric:2729145:1738921539::core:core:ofi_hmem_init():339<warn> Failed to initialize hmem iface FI_HMEM_ZE: No data available
+libfabric:2729145:1738921539::core:core:ze_hmem_dl_init():474<warn> Failed to dlopen libze_loader.so
+libfabric:2729145:1738921539::core:core:ofi_hmem_init():339<warn> Failed to initialize hmem iface FI_HMEM_ZE: No data available
+libfabric:2729145:1738921539::core:core:ze_hmem_dl_init():474<warn> Failed to dlopen libze_loader.so
+libfabric:2729145:1738921539::core:core:fi_getinfo_():1185<warn> fi_getinfo: provider ofi_rxm returned -61 (No data available)
+libfabric:2729145:1738921539::core:core:fi_getinfo_():1185<warn> fi_getinfo: provider ofi_rxd returned -61 (No data available)
+libfabric:2729145:1738921539::core:core:fi_getinfo_():1185<warn> fi_getinfo: provider ofi_rxm returned -61 (No data available)
+libfabric:2729145:1738921539::core:core:fi_getinfo_():1185<warn> fi_getinfo: provider ofi_rxd returned -61 (No data available)
+libfabric:2729145:1738921539::cxi:domain:cxip_domain_enable():142<warn> x3204c0s1b0n0: Security Issue: Using unrestricted service ID 1 for cxi0. Please provide a service ID via auth_key fields.
+libfabric:2729145:1738921539::cxi:cq:ofi_check_cq_attr():189<warn> signaling vector ignored
+libfabric:2729145:1738921732::cxi:ep_data:cxip_rma_common():776<warn> x3204c0s1b0n0: TXC (0x39ea:0): DMA RMA read failed: buf=0x14b85ee1b3c4 len=20548 rkey=0xe1c2443ff6f01e01 roffset=0 nic=0x39aa pid=0 pid_idx=129
+libfabric:2729145:1738921886::cxi:ep_data:cxip_rma_common():776<warn> x3204c0s1b0n0: TXC (0x39ea:0): DMA RMA read failed: buf=0x14b85df0d7c4 len=20548 rkey=0xe1c2443ff2e84601 roffset=0 nic=0x39aa pid=0 pid_idx=129
+libfabric:2729145:1738922039::cxi:ep_data:cxip_rma_common():776<warn> x3204c0s1b0n0: TXC (0x39ea:0): DMA RMA read failed: buf=0x14b85e411bc4 len=20548 rkey=0xe1c2443feee46e01 roffset=0 nic=0x39aa pid=0 pid_idx=129
+libfabric:2729145:1738922193::cxi:ep_data:cxip_rma_common():776<warn> x3204c0s1b0n0: TXC (0x39ea:0): DMA RMA read failed: buf=0x14b85c0f2fc4 len=20548 rkey=0xe1c2443ffabc1601 roffset=0 nic=0x39aa pid=0 pid_idx=129
+libfabric:2729145:1738922347::cxi:ep_data:cxip_rma_common():776<warn> x3204c0s1b0n0: TXC (0x39ea:0): DMA RMA read failed: buf=0x14b85c5f73c4 len=20548 rkey=0xe1c2443ff6b43e01 roffset=0 nic=0x39aa pid=0 pid_idx=129
+libfabric:2729145:1738922492::cxi:ep_data:cxip_rma_common():776<warn> x3204c0s1b0n0: TXC (0x39ea:0): DMA RMA read failed: buf=0x114b050 len=10240 rkey=0xe14f483ff2307381 roffset=0 nic=0x39aa pid=0 pid_idx=129
+libfabric:2729145:1738922492::cxi:ep_data:cxip_rma_common():776<warn> x3204c0s1b0n0: TXC (0x39ea:0): DMA RMA read failed: buf=0x1667a20 len=10240 rkey=0xe14f483ffa945a81 roffset=0 nic=0x39aa pid=0 pid_idx=129
+libfabric:2729145:1738922492::cxi:ep_data:cxip_rma_common():776<warn> x3204c0s1b0n0: TXC (0x39ea:0): DMA RMA read failed: buf=0x13cb050 len=10240 rkey=0xe14f483ff22c7601 roffset=0 nic=0x39aa pid=0 pid_idx=129
+libfabric:2729145:1738922492::cxi:ep_data:cxip_rma_common():776<warn> x3204c0s1b0n0: TXC (0x39ea:0): DMA RMA read failed: buf=0x18e7a20 len=10240 rkey=0xe14f483ff8703381 roffset=0 nic=0x39aa pid=0 pid_idx=129
+libfabric:2729145:1738922492::cxi:ep_data:cxip_rma_common():776<warn> x3204c0s1b0n0: TXC (0x39ea:0): DMA RMA read failed: buf=0x20b7170 len=10240 rkey=0xe14f483ffa845281 roffset=0 nic=0x39aa pid=0 pid_idx=129
+libfabric:2729145:1738922492::cxi:ep_data:cxip_rma_common():776<warn> x3204c0s1b0n0: TXC (0x39ea:0): DMA RMA read failed: buf=0x2fb7180 len=10240 rkey=0xe14f483ff8bc2301 roffset=0 nic=0x39aa pid=0 pid_idx=129
+libfabric:2729145:1738922492::cxi:ep_data:cxip_rma_common():776<warn> x3204c0s1b0n0: TXC (0x39ea:0): DMA RMA read failed: buf=0x2337170 len=10240 rkey=0xe14f483ff85c4581 roffset=0 nic=0x39aa pid=0 pid_idx=129
+libfabric:2729145:1738922492::cxi:ep_data:cxip_rma_common():776<warn> x3204c0s1b0n0: TXC (0x39ea:0): DMA RMA read failed: buf=0x3237180 len=10240 rkey=0xe14f483ff7a40601 roffset=0 nic=0x39aa pid=0 pid_idx=129
+libfabric:2729145:1738922493::cxi:ep_data:cxip_rma_common():776<warn> x3204c0s1b0n0: TXC (0x39ea:0): DMA RMA read failed: buf=0x25b7170 len=10240 rkey=0xe14f483ff9d64481 roffset=0 nic=0x39aa pid=0 pid_idx=129
+libfabric:2729145:1738922493::cxi:ep_data:cxip_rma_common():776<warn> x3204c0s1b0n0: TXC (0x39ea:0): DMA RMA read failed: buf=0x34b7180 len=10240 rkey=0xe14f483ff6b04301 roffset=0 nic=0x39aa pid=0 pid_idx=129

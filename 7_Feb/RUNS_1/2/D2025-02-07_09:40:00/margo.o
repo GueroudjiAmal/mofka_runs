@@ -1,0 +1,104 @@
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: 
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: ####################################################################
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: # Available Margo (Mercury) network transports on host [35mx3003c0s1b0n0
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: [0m# - [32mGREEN [0mindicates that it can be initialized successfully.
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: # - [31mRED [0mindicates that it cannot.
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: ####################################################################
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: 
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: # <address> <transport> <protocol> <results> <example runtime address>
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: 
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: ### libfabric CXI provider (HPE Cassini/Slingshot 11) ###
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: [32mofi+cxi://	ofi	cxi	YES	ofi+cxi://0x2002d400
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: [0m
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: ####################################################################
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: # Notes on interpretting margo-info output:
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: # - This utility queries software stack capability, not hardware availability.
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: # - UCX does not directly expose which underlying network plugins are
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: #   available. The "dc" protocol type is only supported on Mellanox
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: #   InfiniBand adapters, however. See "ucx_info -d" for more information 
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: #   about transports available in your UCX library.
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: # - UCX will automatically choose a transport if you select the
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: #   "ucx+all://" address string.
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: # - For more information about a particular address specifier, please
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: #   execute margo-info with that address specifier as its only argument
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: #   and check the resulting log file for details.
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: #   (E.g., "margo-info ofi+verbs://" for Verbs-specific diagnostics)
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: # 
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: ####################################################################
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: # Suggested transport-level diagnostic tools:
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: # - libfabric:	`fi_info -t FI_EP_RDM`
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: # - UCX:	`ucx_info -d`
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: # - verbs:	`ibstat`
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: # - TCP/IP:	`ifconfig`
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: # - CXI:	`cxi_stat`
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: # 
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: ####################################################################
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: # Verbose margo-info information:
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: # - debug log output:
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: #   [35m/tmp/margo-info-stderr-BNWn24
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: [0m# - results in JSON format:
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: #   [35m/tmp/margo-info-json-cpjSU2
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: [0m# 
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: ####################################################################
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: # List of dynamic libraries used by the margo-info utility:
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: # - /home/agueroudji/spack/opt/spack/linux-sles15-zen3/gcc-12.3.0/mochi-margo-0.18.3-om2pztq6s2cwdzxvdy6l6sipr7uvxryr/lib/libmargo.so.0
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: # - /home/agueroudji/spack/opt/spack/linux-sles15-zen3/gcc-12.3.0/mercury-2.4.0rc5-f2ewbzqypqzpcqswav4qzh3irbomhlno/lib/libmercury.so.2
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: # - /opt/cray/libfabric/1.15.2.0/lib64/libfabric.so.1
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: # - /usr/lib64/libcxi.so.1
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: # 
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: # Note: the above list was filtered display only those libraries likely related
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: #       to communication. Run margo-info with -l to display all libraries.
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: # 
+x3003c0s1b0n0.hsn.cm.polaris.alcf.anl.gov 0: ####################################################################
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: 
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: ####################################################################
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: # Available Margo (Mercury) network transports on host [35mx3003c0s31b0n0
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: [0m# - [32mGREEN [0mindicates that it can be initialized successfully.
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: # - [31mRED [0mindicates that it cannot.
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: ####################################################################
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: 
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: # <address> <transport> <protocol> <results> <example runtime address>
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: 
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: ### libfabric CXI provider (HPE Cassini/Slingshot 11) ###
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: [32mofi+cxi://	ofi	cxi	YES	ofi+cxi://0x20023c00
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: [0m
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: ####################################################################
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: # Notes on interpretting margo-info output:
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: # - This utility queries software stack capability, not hardware availability.
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: # - UCX does not directly expose which underlying network plugins are
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: #   available. The "dc" protocol type is only supported on Mellanox
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: #   InfiniBand adapters, however. See "ucx_info -d" for more information 
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: #   about transports available in your UCX library.
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: # - UCX will automatically choose a transport if you select the
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: #   "ucx+all://" address string.
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: # - For more information about a particular address specifier, please
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: #   execute margo-info with that address specifier as its only argument
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: #   and check the resulting log file for details.
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: #   (E.g., "margo-info ofi+verbs://" for Verbs-specific diagnostics)
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: # 
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: ####################################################################
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: # Suggested transport-level diagnostic tools:
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: # - libfabric:	`fi_info -t FI_EP_RDM`
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: # - UCX:	`ucx_info -d`
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: # - verbs:	`ibstat`
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: # - TCP/IP:	`ifconfig`
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: # - CXI:	`cxi_stat`
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: # 
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: ####################################################################
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: # Verbose margo-info information:
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: # - debug log output:
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: #   [35m/tmp/margo-info-stderr-MDiI9B
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: [0m# - results in JSON format:
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: #   [35m/tmp/margo-info-json-ODOZHy
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: [0m# 
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: ####################################################################
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: # List of dynamic libraries used by the margo-info utility:
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: # - /home/agueroudji/spack/opt/spack/linux-sles15-zen3/gcc-12.3.0/mochi-margo-0.18.3-om2pztq6s2cwdzxvdy6l6sipr7uvxryr/lib/libmargo.so.0
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: # - /home/agueroudji/spack/opt/spack/linux-sles15-zen3/gcc-12.3.0/mercury-2.4.0rc5-f2ewbzqypqzpcqswav4qzh3irbomhlno/lib/libmercury.so.2
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: # - /opt/cray/libfabric/1.15.2.0/lib64/libfabric.so.1
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: # - /usr/lib64/libcxi.so.1
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: # 
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: # Note: the above list was filtered display only those libraries likely related
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: #       to communication. Run margo-info with -l to display all libraries.
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: # 
+x3003c0s31b0n0.hsn.cm.polaris.alcf.anl.gov 1: ####################################################################

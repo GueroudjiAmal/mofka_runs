@@ -1,0 +1,11 @@
+libfabric:2938530:1738921290::core:core:ze_hmem_dl_init():474<warn> Failed to dlopen libze_loader.so
+libfabric:2938530:1738921290::core:core:ofi_hmem_init():339<warn> Failed to initialize hmem iface FI_HMEM_ZE: No data available
+libfabric:2938530:1738921290::core:core:ze_hmem_dl_init():474<warn> Failed to dlopen libze_loader.so
+libfabric:2938530:1738921290::core:core:ofi_hmem_init():339<warn> Failed to initialize hmem iface FI_HMEM_ZE: No data available
+libfabric:2938530:1738921290::core:core:ze_hmem_dl_init():474<warn> Failed to dlopen libze_loader.so
+libfabric:2938530:1738921290::core:core:fi_getinfo_():1185<warn> fi_getinfo: provider ofi_rxm returned -61 (No data available)
+libfabric:2938530:1738921290::core:core:fi_getinfo_():1185<warn> fi_getinfo: provider ofi_rxd returned -61 (No data available)
+libfabric:2938530:1738921290::core:core:fi_getinfo_():1185<warn> fi_getinfo: provider ofi_rxm returned -61 (No data available)
+libfabric:2938530:1738921290::core:core:fi_getinfo_():1185<warn> fi_getinfo: provider ofi_rxd returned -61 (No data available)
+libfabric:2938530:1738921290::cxi:domain:cxip_domain_enable():142<warn> x3005c0s7b0n0: Security Issue: Using unrestricted service ID 1 for cxi0. Please provide a service ID via auth_key fields.
+libfabric:2938530:1738921290::cxi:cq:ofi_check_cq_attr():189<warn> signaling vector ignored
