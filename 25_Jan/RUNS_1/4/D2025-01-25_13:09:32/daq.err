@@ -1,0 +1,3 @@
+WARNING:dxchange.reader:netCDF4 module not found
+ERROR:dxchange.reader:Unrecognized hdf5 dataset: "exchange/data_white"
+ERROR:dxchange.reader:Unrecognized hdf5 dataset: "exchange/data_dark"
